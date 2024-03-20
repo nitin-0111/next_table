@@ -1,6 +1,6 @@
 "use client"
 import { Input } from '@/components/ui/input'
-import { SheetDemo } from '../Filters/Filter'
+import { Filter } from '../Filters/Filter'
 
 
 export const DataTableHeader = ({ table }) => {
@@ -8,7 +8,7 @@ export const DataTableHeader = ({ table }) => {
         <div className="flex items-end justify-end gap-2">
             <div className="flex  items-end space-x-2">
                 <Input
-                    placeholder="Filter tasks..."
+                    placeholder="Filter Name ..."
                     value={(table.getColumn("name")?.getFilterValue()) ?? ""}
                     onChange={(event) =>
                         table.getColumn("name")?.setFilterValue(event.target.value)
@@ -18,7 +18,7 @@ export const DataTableHeader = ({ table }) => {
 
             </div>
             <div className="">
-                <SheetDemo />
+                <Filter />
 
             </div>
         </div>
