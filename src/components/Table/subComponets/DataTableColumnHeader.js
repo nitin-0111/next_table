@@ -4,6 +4,7 @@ import {
   ArrowUpIcon,
   CaretSortIcon,
   EyeNoneIcon,
+  EyeOpenIcon
 } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu,

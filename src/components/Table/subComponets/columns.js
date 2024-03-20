@@ -4,7 +4,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { DataTableColumnHeader } from './DataTableColumnHeader'
 
 
-export const columns = [
+export const Columns = [
     {
         accessorKey: "id",
         header: ({ column }) => (
@@ -54,7 +54,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[120px]"> {
+                <div className="w-[120px]" suppressHydrationWarning> {
                     DateTime.fromISO(row.getValue("createdAt")).toLocaleString(DateTime.DATE_MED)}</div>
             )
         },
@@ -66,7 +66,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[120px]"> {
+                <div className="w-[120px]" suppressHydrationWarning > {
                     DateTime.fromISO(row.getValue("updatedAt")).toLocaleString(DateTime.DATE_MED)}</div>
             )
         },

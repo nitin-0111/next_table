@@ -986,3 +986,31 @@ export const sampleData=[
         "sale_price": 48.95
     }
 ]
+
+
+export function getCategories(data=sampleData) {
+   
+    const categories = [];
+    data.forEach(item => {
+        const categoryIndex = categories.findIndex(cat => cat.name === item.category);
+        if (categoryIndex === -1) {
+            categories.push({ name: item.category, items: 1 }); // Initialize count to 1
+        } else {
+            categories[categoryIndex].items++; // Increment count for existing category
+        }
+    });
+    return categories;
+}
+
+export function getSubcategories(data=sampleData) {
+    const subcategories = [];
+    data.forEach(item => {
+        const subcategoryIndex = subcategories.findIndex(subcat => subcat.name === item.subcategory);
+        if (subcategoryIndex === -1) {
+            subcategories.push({ name: item.category, items: 1 });
+        } else {
+            subcategories[subcategoryIndex].items++;
+        }
+    });
+    return subcategories;
+}
