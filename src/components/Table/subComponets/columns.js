@@ -10,7 +10,7 @@ export const columns = [
         header: ({ column }) => (
             <DataTableColumnHeader column={column} title="ID" />
         ),
-        cell: ({ row }) => <div className="w-[80px]">{row.getValue("id")}</div>,
+        cell: ({ row }) => <div className="w-[50px]">{row.getValue("id")}</div>,
 
     },
     {
@@ -20,7 +20,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[80px]"> {row.getValue("name")}</div>
+                <div className="w-[200px]"> {row.getValue("name")}</div>
             )
         },
     },
@@ -31,7 +31,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[80px]"> {row.getValue("category")}</div>
+                <div className="w-[100px]"> {row.getValue("category")}</div>
             )
         },
     },
@@ -43,7 +43,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[80px]"> {row.getValue("subcategory")}</div>
+                <div className="w-[100px]"> {row.getValue("subcategory")}</div>
             )
         },
     },
@@ -54,7 +54,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[80px]"> {
+                <div className="w-[120px]"> {
                     DateTime.fromISO(row.getValue("createdAt")).toLocaleString(DateTime.DATE_MED)}</div>
             )
         },
@@ -66,7 +66,7 @@ export const columns = [
         ),
         cell: ({ row }) => {
             return (
-                <div className="w-[80px]"> {
+                <div className="w-[120px]"> {
                     DateTime.fromISO(row.getValue("updatedAt")).toLocaleString(DateTime.DATE_MED)}</div>
             )
         },
